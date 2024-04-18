@@ -5,7 +5,7 @@ import {
     ActivityIndicator,
     StyleSheet,
 } from "react-native";
-import IconSvg from "./svg/Icon";
+import IconSvg from "./assets/image/icon.svg";
 
 const App = () => {
     return (
