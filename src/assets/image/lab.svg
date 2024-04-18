@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="white">
+    <path d="M 50 10 
+    A 40 40 0 1 0 50 90 
+    A 40 40 0 1 0 50 10 
+    Z 
+    M 50 30 
+    A 20 20 0 1 1 50 70 
+    A 20 20 0 1 1 50 30 
+    Z" fill="#0000dd" stroke="#00aaff" stroke-width="3" />
+    <circle cx="50" cy="10" r="1" fill="red" />
+    <circle cx="50" cy="90" r="1" fill="magenta" />
+    <circle cx="50" cy="30" r="1" fill="cyan" />
+    <circle cx="40" cy="40" r="1" fill="green" />
+    <circle cx="50" cy="70" r="1" fill="orange" />
+</svg>
