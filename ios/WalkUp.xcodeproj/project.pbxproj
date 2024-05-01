@@ -14,8 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-WalkUp-WalkUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WalkUp-WalkUpTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		BA01CEB3668246BF937AA124 /* icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = DE345DFB4E274DDCB04F7405 /* icon.svg */; };
-		A0B79997D71645F1A52062F3 /* lab.svg in Resources */ = {isa = PBXBuildFile; fileRef = 25DF8BD052704C22BBA2146F /* lab.svg */; };
+		964D2B562B7C475B923AD900 /* NanumSquareNeo-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 898DE633AC104EF4A6B23866 /* NanumSquareNeo-Variable.ttf */; };
+		9642EF0F6B4E448BA3CB341A /* icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 38A05DBAF57340D6AB4DA67D /* icon.svg */; };
+		6C6B5AF590334B14B53C1344 /* lab.svg in Resources */ = {isa = PBXBuildFile; fileRef = C73E692020B441029998A1DA /* lab.svg */; };
+		30882C4E18134614BFBC9013 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B542AE2B4A64DC395D116A5 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WalkUp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-WalkUp-WalkUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkUp-WalkUpTests.release.xcconfig"; path = "Target Support Files/Pods-WalkUp-WalkUpTests/Pods-WalkUp-WalkUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		DE345DFB4E274DDCB04F7405 /* icon.svg */ = {isa = PBXFileReference; name = "icon.svg"; path = "../assets/image/icon.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		25DF8BD052704C22BBA2146F /* lab.svg */ = {isa = PBXFileReference; name = "lab.svg"; path = "../assets/image/lab.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		898DE633AC104EF4A6B23866 /* NanumSquareNeo-Variable.ttf */ = {isa = PBXFileReference; name = "NanumSquareNeo-Variable.ttf"; path = "../src/assets/fonts/NanumSquareNeo-Variable.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		38A05DBAF57340D6AB4DA67D /* icon.svg */ = {isa = PBXFileReference; name = "icon.svg"; path = "../src/assets/image/icon.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C73E692020B441029998A1DA /* lab.svg */ = {isa = PBXFileReference; name = "lab.svg"; path = "../src/assets/image/lab.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B542AE2B4A64DC395D116A5 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "WalkUp/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				5B542AE2B4A64DC395D116A5 /* BootSplash.storyboard */,
 			);
 			name = WalkUp;
 			sourceTree = "<group>";
@@ -156,8 +161,9 @@
 		E7CB2D40E61C4133A36B5A1E /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				DE345DFB4E274DDCB04F7405 /* icon.svg */,
-				25DF8BD052704C22BBA2146F /* lab.svg */,
+				898DE633AC104EF4A6B23866 /* NanumSquareNeo-Variable.ttf */,
+				38A05DBAF57340D6AB4DA67D /* icon.svg */,
+				C73E692020B441029998A1DA /* lab.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				BA01CEB3668246BF937AA124 /* icon.svg in Resources */,
-				A0B79997D71645F1A52062F3 /* lab.svg in Resources */,
+				964D2B562B7C475B923AD900 /* NanumSquareNeo-Variable.ttf in Resources */,
+				9642EF0F6B4E448BA3CB341A /* icon.svg in Resources */,
+				6C6B5AF590334B14B53C1344 /* lab.svg in Resources */,
+				30882C4E18134614BFBC9013 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
