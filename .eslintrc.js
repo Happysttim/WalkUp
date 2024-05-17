@@ -14,5 +14,6 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/require-await": "off",
         "no-useless-escape": "off",
+        "react-hooks/exhaustive-deps": "off",
     },
 };

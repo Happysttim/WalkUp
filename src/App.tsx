@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import RNBootSplash from "react-native-bootsplash";
 import type { RootStackParamList } from "./types/RootStackParamList";
-import Main from "./page/Main";
+import Main from "./pages/Main";
 
 const App = () => {
     useEffect(() => {
@@ -18,7 +18,12 @@ const App = () => {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Main">
+            <Stack.Navigator initialRouteName="Main" screenOptions={
+                {
+                    headerShown: false,
+                    animation: "none",
+                }
+            }>
                 <Stack.Screen name="Main" component={Main}/>
             </Stack.Navigator>
         </NavigationContainer>
