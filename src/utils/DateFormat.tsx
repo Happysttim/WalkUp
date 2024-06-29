@@ -1,23 +1,23 @@
 import { StringMap } from "../types/Type";
 
 const krDays = [
+    "일",
     "월",
     "화",
     "수",
     "목",
     "금",
     "토",
-    "일",
 ];
 
 const enDays = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
 ];
 
 export const dateFormat = (d: Date, formatted: string) => {
@@ -42,9 +42,9 @@ export const dateFormat = (d: Date, formatted: string) => {
         m: minutes.toString(),
         ss: seconds.toLocaleString("en-US", { minimumIntegerDigits: 2 }),
         s: seconds.toString(),
-        kE: krDays[week - 1],
-        eE: enDays[week - 1],
-        eEE: enDays[week - 1].slice(3),
+        kE: krDays[week],
+        eE: enDays[week],
+        eEE: enDays[week].slice(3),
     };
 
     return formatted.replace(/yyyy|yy|MM|M|dd|d|HH|H|mm|m|ss|s|kE|eE|eEE/gi,

@@ -1,4 +1,7 @@
 {
   "name": "WalkUp",
-  "displayName": "WalkUp"
+  "displayName": "WalkUp",
+  "plugins": [
+    "./android-manifest.plugin.js"
+  ]
 }

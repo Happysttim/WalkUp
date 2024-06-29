@@ -1,5 +1,6 @@
-import { NativeEventEmitter, NativeModules } from "react-native";
+import { EmitterSubscription, NativeEventEmitter, NativeModules } from "react-native";
 const { CronJob } = NativeModules;
+const eventEmitter = new NativeEventEmitter(NativeModules.CronJob);
 
 interface CronJobInterface {
     registerCronJob: (name: string, expression: string, eventName: string) => boolean
@@ -9,7 +10,11 @@ interface CronJobInterface {
     isRunning: (name: string) => boolean
 }
 
+const CronJobEventEmitter = {
+    addListener: (eventName: string, listener: (event: { datetime: string}) => void, context?: object): EmitterSubscription => eventEmitter.addListener(eventName, listener, context),
+    removeAllListeners: (eventName: string): void => eventEmitter.removeAllListeners(eventName),
+    listenerCount: (eventName: string): number => eventEmitter.listenerCount(eventName),
+};
 
-const eventEmitter = new NativeEventEmitter(NativeModules.CronJob);
 
-export { eventEmitter, CronJob as CronJobInterface };
+export { CronJobEventEmitter, CronJob as CronJobInterface };

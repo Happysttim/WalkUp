@@ -15,5 +15,6 @@ module.exports = {
         "@typescript-eslint/require-await": "off",
         "no-useless-escape": "off",
         "react-hooks/exhaustive-deps": "off",
+        "no-bitwise": "off",
     },
 };

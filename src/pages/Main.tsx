@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import SwiperPagination from "../components/SwiperPagination";
-import WalkProcess from "../components/WalkProcess";
 import LinearGradient from "react-native-linear-gradient";
 import { Dimensions, StyleSheet, Text } from "react-native";
 import isDarkness from "../utils/isDarkness";
 import SwiperFlatList from "react-native-swiper-flatlist";
 import styled from "styled-components/native";
-import DateView from "../components/DateView";
+import SwiperWalkView from "./swipers/SwiperWalkView";
+import SwiperChartView from "./swipers/SwiperChartView";
 
 const Main = () => {
     const swiperRef = useRef<SwiperFlatList>(null);
@@ -38,24 +38,10 @@ const Main = () => {
                     }
                 >
                     <SwiperView>
-                        <WalkProcess
-                            animated={false}
-                            count={10}
-                            goal={1000}
-                            height="auto"
-                            width="auto"
-                            strokeColor={"#FF9393"} />
+                        <SwiperWalkView />
                     </SwiperView>
                     <SwiperView>
-                        <DateView
-                            name="MainDate"
-                            format="MM.dd(kE)"
-                            scheduled
-                            dateStyle={undefined}
-                            viewStyle={undefined}
-                            expression="* * * 1 * 0o"
-                            eventName="CronJobSchedule"
-                            onTick={undefined} />
+                        <SwiperChartView />
                     </SwiperView>
                     <SwiperView>
                         <Text>Hello World</Text>
@@ -68,7 +54,7 @@ const Main = () => {
 
 const SwiperView = styled.View`
     width: ${Dimensions.get("window").width};
-    justifyContent: center;
+    height: ${Dimensions.get("window").height - 120};
     alignItems: center;
     flex: 1;
 `;
@@ -76,8 +62,18 @@ const SwiperView = styled.View`
 const sheet = StyleSheet.create({
     StatusBox: {
         width: "100%",
-        height: 390,
+        height: "100%",
         alignItems: "center",
+    },
+    dateStyle: {
+        color: "#9F9F9F",
+        fontSize: 18,
+    },
+    viewStyle: {
+        flex: 1,
+        width: Dimensions.get("window").width,
+        marginLeft: 50,
+        marginTop: 30,
     },
 });
 

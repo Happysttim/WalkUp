@@ -1,6 +1,6 @@
 import React from "react";
-import { Svg, Circle, Text as SvgText } from "react-native-svg";
-import { type ColorValue } from "react-native";
+import { Svg, Circle, Text as SvgText, Defs } from "react-native-svg";
+import { Dimensions, type ColorValue } from "react-native";
 import type { Size } from "../types/Type";
 
 interface Props {
@@ -10,11 +10,12 @@ interface Props {
     goal: number,
     strokeColor: ColorValue,
     animated: boolean,
-};
+}
 
 const WalkProcess = ({ width, height, count, goal, strokeColor, animated = false }: Props) => {
-    const svgWidth = width === "auto" ? 200 : width;
-    const svgHeight = height === "auto" ? 200 : height;
+    const dimensionWidth = 200; //Dimensions.get("window").width = 50;
+    const svgWidth = width === "auto" ? dimensionWidth : width;
+    const svgHeight = height === "auto" ? dimensionWidth : height;
     const radius = (Math.sqrt(svgWidth * svgHeight) / 2) - 20;
     const x = svgWidth / 2;
     const y = svgHeight / 2;

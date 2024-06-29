@@ -4,7 +4,6 @@ import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
-import expo.modules.ReactActivityDelegateWrapper
 import com.zoontek.rnbootsplash.RNBootSplash
 import android.os.Bundle
 
@@ -28,5 +27,5 @@ class MainActivity : ReactActivity() {
   /**
    * DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
    */
-  override fun createReactActivityDelegate(): ReactActivityDelegate = ReactActivityDelegateWrapper(this, BuildConfig.IS_NEW_ARCHITECTURE_ENABLED, DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled))
+  override fun createReactActivityDelegate(): ReactActivityDelegate = DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
 }

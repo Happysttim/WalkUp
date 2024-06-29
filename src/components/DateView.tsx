@@ -3,8 +3,9 @@ import {
     View,
     Text,
     type ViewStyle,
+    TextStyle,
 } from "react-native";
-import { eventEmitter, CronJobInterface } from "../module/CronJob";
+import { CronJobEventEmitter, CronJobInterface } from "../module/CronJob";
 import { dateFormat } from "../utils/DateFormat";
 
 export type DateViewRefProps = {
@@ -14,7 +15,7 @@ export type DateViewRefProps = {
 };
 
 interface Props {
-    dateStyle: ViewStyle | undefined
+    dateStyle: ViewStyle | TextStyle | undefined
     viewStyle: ViewStyle | undefined
     format:  string | undefined
     ref: Ref<DateViewRefProps> | undefined
@@ -29,9 +30,10 @@ const DateView = forwardRef(({ dateStyle = undefined, viewStyle = undefined, for
 
     const [ dateTime, setDateTime ] = useState<Date>(new Date());
     const { registerCronJob, startCronJob, stopCronJob, cron, isRunning } = CronJobInterface;
+    const { addListener } = CronJobEventEmitter;
 
     useEffect(() => {
-        const listener = eventEmitter.addListener(eventName, (event: {
+        const listener = addListener(eventName, (event: {
             datetime: string
         }) => {
             setDateTime(new Date(event.datetime));
